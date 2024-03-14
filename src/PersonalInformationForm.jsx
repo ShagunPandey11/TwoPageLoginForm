@@ -24,8 +24,11 @@ const PersonalInformationForm = () => {
     if (name.trim() === "" || name.length <= 3) {
       Nerror = 'Invalid Name';
     }
-    const dobInput = new Date(dob);
-    if (isNaN(dobInput)) {
+   
+    const today = new Date();
+    const birthDate = new Date(dob);
+    const age = today.getFullYear() - birthDate.getFullYear();
+    if (age<7) {
       dError = 'Invalid DOB format.';
     }
     if (address.trim() === '' || address.length <= 5) {
@@ -38,8 +41,8 @@ const PersonalInformationForm = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div style={{display:"flex",flexDirection:"column",alignItems:"flex-end"}}>
+      <form>
        <h1>Login</h1>
         <label>
           Name:
@@ -56,8 +59,9 @@ const PersonalInformationForm = () => {
           <input type="date" value={dob} onChange={(event) => setDob(event.target.value)} />
         </label>
         {dobError && <p style={{ color: 'red' }}>{dobError}</p>}
-        <button type="submit">Next</button>
+        {/* <button type="submit">Next</button> */}
       </form>
+        <button onClick={handleSubmit}> Next</button>
     </div>
   );
 };

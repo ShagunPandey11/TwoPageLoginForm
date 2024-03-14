@@ -52,11 +52,11 @@ const AdditionalInformation = () => {
                     <input type="text" value={email} onChange={(event) => setEmail(event.target.value)} />
                 </label>
                 {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
-                    <section className='btns'>
-                    <button type='button' onChange={prev}>Previous</button>
-                    <button type="submit">Next</button>
-                    </section>
             </form>
+            <section className='btns'>
+                <button onClick={prev}>Previous</button>
+                <button onClick={handleSubmit}>Next</button>
+            </section>
         </div>
         </>
     );
