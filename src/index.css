@@ -1,0 +1,81 @@
+/* PersonalInformationForm and AdditionalInformation shared styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 30px;
+  padding: 50px;
+  background-color: white;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(211, 205, 227);
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="date"] {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+p {
+  color: red;
+  margin-top: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  size: 400px;
+  height: 30px;
+}
+
+button:hover {
+  background-color: #0056B3;
+}
+
+/* AdditionalInformation specific styles */
+.additional-information {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btns {
+  padding-top: 30px;
+  display: flex; 
+  justify-content: space-between;
+  width: 200px;
+}
+
+
+/* Confirmation specific styles */
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.confirmation p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
